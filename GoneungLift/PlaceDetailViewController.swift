@@ -15,6 +15,7 @@ class PlaceDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var alcLeadingOfIndicator: NSLayoutConstraint!
     
+    var placeListView: PlaceListView!
     var placeTitle: String!
     var placeCode: String!
     
@@ -26,7 +27,7 @@ class PlaceDetailViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.layoutIfNeeded()
         
-        let placeListView = PlaceListView.initPlaceListViewWithTargetFrame(frame: CGRect(x: 0.0, y: 0.0, width: DEVICE_WIDTH(), height: scrollView.bounds.size.height), placeCode: placeCode)
+        placeListView = PlaceListView.initPlaceListViewWithTargetFrame(frame: CGRect(x: 0.0, y: 0.0, width: DEVICE_WIDTH(), height: scrollView.bounds.size.height), placeCode: placeCode)
         placeListView.parentVC = self
         
         let placeInfoView = PlaceInfoView.initPlaceInfoWithTargetFrame(frame: CGRect(x: DEVICE_WIDTH(), y: 0.0, width: DEVICE_WIDTH(), height: scrollView.bounds.size.height))
@@ -38,6 +39,10 @@ class PlaceDetailViewController: UIViewController, UIScrollViewDelegate {
         scrollView.isScrollEnabled = false
         
         lbPlaceTitle.text = placeTitle
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        placeListView.reloadData()
     }
     
     @IBAction func didTouchTimeLineButton(_ sender: UIButton) {

@@ -31,6 +31,10 @@ class PlaceListView: UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         collectionView.register(UINib.init(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
     }
     
+    func reloadData() {
+        requestPlaceContentList(placeCode: self.placeCode)
+    }
+    
     func requestPlaceContentList(placeCode: String) {
         
         NetManager().requestPlacePostList(placeId: placeCode) { (results) in
@@ -92,6 +96,12 @@ class PlaceListView: UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         
         alert.addAction(UIAlertAction(title: "삭제", style: .default , handler:{ (UIAlertAction)in
             print("삭제")
+            
+            let data = self.dataList![index] as MainContents
+
+            NetManager().requestDeletePost(id:data.id , result: { (result) in
+                self.reloadData()
+            })
             
         }))
         

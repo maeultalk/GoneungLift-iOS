@@ -145,9 +145,8 @@ class RecieveDetailViewController: UIViewController, UITableViewDataSource, UITa
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveNotification(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveNotification(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 
-
     }
-    
+
     func reloadData() {
         NetManager().requestInboxDetail(inboxId: inboxId) { (result) in
             self.dataList = result

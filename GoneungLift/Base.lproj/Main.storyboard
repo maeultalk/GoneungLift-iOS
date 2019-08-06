@@ -1556,6 +1556,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bz-1U-cHC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <connections>
+                                    <action selector="didTouchBackground:" destination="Ofc-J1-0aC" eventType="touchUpInside" id="C2F-qv-7i9"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mUM-Kp-MlP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <color key="backgroundColor" red="0.99359983210000002" green="0.79711896179999997" blue="0.21937489509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1825,19 +1831,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mUM-Kp-MlP" firstAttribute="leading" secondItem="UF0-7B-7bW" secondAttribute="leading" id="0lL-73-MTC"/>
+                            <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="2bz-1U-cHC" secondAttribute="trailing" id="2sS-ea-B1d"/>
                             <constraint firstItem="UZl-jk-cyI" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="2zt-Le-Eq0"/>
                             <constraint firstItem="FKj-yu-7fe" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="Ci2-SX-uJ0"/>
                             <constraint firstItem="jRh-Vh-W4d" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" constant="10" id="ICd-j4-QnD"/>
+                            <constraint firstItem="2bz-1U-cHC" firstAttribute="top" secondItem="ZsW-qa-Pgn" secondAttribute="top" id="KMw-kQ-lRx"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="yO6-e7-uAc" secondAttribute="trailing" id="MGC-tL-R7W"/>
                             <constraint firstAttribute="bottom" secondItem="cJQ-m0-mqI" secondAttribute="bottom" id="NTm-10-wfb"/>
                             <constraint firstItem="yO6-e7-uAc" firstAttribute="top" secondItem="jRh-Vh-W4d" secondAttribute="bottom" constant="20" id="O1G-cc-Po6"/>
                             <constraint firstItem="8E1-3k-Err" firstAttribute="top" secondItem="ZsW-qa-Pgn" secondAttribute="top" id="PdJ-9l-A3t"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="UZl-jk-cyI" secondAttribute="trailing" id="SBR-mp-4of"/>
                             <constraint firstItem="cJQ-m0-mqI" firstAttribute="top" secondItem="FKj-yu-7fe" secondAttribute="top" id="SOy-L2-TD5"/>
+                            <constraint firstItem="ZsW-qa-Pgn" firstAttribute="bottom" secondItem="2bz-1U-cHC" secondAttribute="bottom" id="TAG-dc-qdA"/>
                             <constraint firstItem="8E1-3k-Err" firstAttribute="leading" secondItem="UF0-7B-7bW" secondAttribute="leading" id="TCI-ul-E8R"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="cJQ-m0-mqI" secondAttribute="trailing" id="Tq8-9L-PSu"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="mUM-Kp-MlP" secondAttribute="trailing" id="ctW-uJ-BWD"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="8E1-3k-Err" secondAttribute="trailing" id="cxt-cq-ZoA"/>
+                            <constraint firstItem="2bz-1U-cHC" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="eHm-tL-tsO"/>
                             <constraint firstItem="yO6-e7-uAc" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="hVP-Q9-EdK"/>
                             <constraint firstItem="mUM-Kp-MlP" firstAttribute="bottom" secondItem="8E1-3k-Err" secondAttribute="bottom" id="j7W-Xy-L8Y"/>
                             <constraint firstItem="UZl-jk-cyI" firstAttribute="top" secondItem="mUM-Kp-MlP" secondAttribute="bottom" id="oEp-vV-D8t"/>

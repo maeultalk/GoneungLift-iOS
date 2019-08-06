@@ -80,6 +80,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         alert.addAction(UIAlertAction(title: "삭제", style: .default , handler:{ (UIAlertAction)in
             print("삭제")
             
+            let data = self.dataList![index] as MainContents
+            
+            NetManager().requestDeletePost(id:data.id , result: { (result) in
+                self.loadMainList()
+            })
         }))
         
         alert.addAction(UIAlertAction(title: "취소", style: .destructive , handler:{ (UIAlertAction)in

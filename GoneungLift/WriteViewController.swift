@@ -104,7 +104,6 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
     }
     
     
-    
     func addImage(image: UIImage) {
         
         if imageList.contains(nil) {
@@ -184,6 +183,12 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
 
     }
     
+    @IBAction func didTouchBackground(_ sender: UIButton) {
+        
+        if textview.isFirstResponder {
+            textview.resignFirstResponder()
+        }
+    }
     // MARK: - User Action
 
     // button tag : 300, 301, 302

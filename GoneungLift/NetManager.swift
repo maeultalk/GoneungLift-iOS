@@ -334,15 +334,33 @@ class NetManager: NSObject {
         }
     }
     
+    func requestDeletePost(id: String, result: @escaping(_ result: Bool) -> Void) {
+        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get/delete_content.php?id=\(id)"
+        
+        Alamofire.request(URL(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
+            
+            print(results)
+            
+            if results.result.isSuccess {
+                result(true)
+            } else {
+                result(false)
+            }
+        }
+    }
+    
     
     func requestModifyPost(id: String, placeCode: String, content: String, image1: UIImage?, imageName: String?, image2: UIImage?, imageName2: String?, image3: UIImage?, imageName3: String?, result: @escaping(_ result: Bool) -> Void) {
         
+        
+        let params = ["id" : "\(id)", "place_code" : "\(placeCode)", "user" : "\(User.info.userEmail!)", "content": "\(content)", "imageName": "\(imageName!)", "imageName2": "\(imageName2!)", "imageName3" : "\(imageName3!)" ]
+
         if image1 == nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content.php?id=\(id)&place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)%collect=&imageName=&imageName2=&imageName3="
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content.php"
             
             urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
-            Alamofire.request(URL(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
+            Alamofire.request(URL(string: urlString)!, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
                 
                 print(results)
                 
@@ -353,13 +371,24 @@ class NetManager: NSObject {
                 }
                 
             }
-        } else if image1 != nil && image2 == nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content_1img.php?id=\(id)&place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)%collect=&imageName=&imageName2=&imageName3="
+            
+            return
+        }
+   
+        
+        if image1 != nil && image2 == nil {
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content_1img.php"
             
             urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
             Alamofire.upload(multipartFormData: { multipartFormData in
                 multipartFormData.append((image1?.jpegData(compressionQuality: 1.0))!, withName: imageName!, mimeType: "image/jpg")
+                
+                for (key, value) in params
+                {
+                    multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                }
+
            
             }, to:urlString , encodingCompletion: { result in
                 switch result {
@@ -372,13 +401,19 @@ class NetManager: NSObject {
                 }
             })
         } else if image1 != nil && image2 != nil && image3 == nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content_2img.php?id=\(id)&place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)%collect=&imageName=&imageName2=&imageName3="
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content_2.php"
             
             urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
             Alamofire.upload(multipartFormData: { multipartFormData in
                 multipartFormData.append((image1?.jpegData(compressionQuality: 1.0))!, withName: imageName!, mimeType: "image/jpg")
                 multipartFormData.append((image2?.jpegData(compressionQuality: 1.0))!, withName: imageName2!, mimeType: "image/jpg")
+                
+                for (key, value) in params
+                {
+                    multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                }
+
 
             }, to:urlString , encodingCompletion: { result in
                 switch result {
@@ -393,14 +428,20 @@ class NetManager: NSObject {
 
             
         } else if image1 != nil && image2 != nil && image3 != nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content_3img.php?id=\(id)&place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)%collect=&imageName=&imageName2=&imageName3="
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/update_content_3img.php"
             
-            urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+//            urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
             Alamofire.upload(multipartFormData: { multipartFormData in
                 multipartFormData.append((image1?.jpegData(compressionQuality: 1.0))!, withName: imageName!, mimeType: "image/jpg")
                 multipartFormData.append((image2?.jpegData(compressionQuality: 1.0))!, withName: imageName2!, mimeType: "image/jpg")
                 multipartFormData.append((image3?.jpegData(compressionQuality: 1.0))!, withName: imageName3!, mimeType: "image/jpg")
+                
+                for (key, value) in params
+                {
+                    multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                }
+
 
             }, to:urlString , encodingCompletion: { result in
                 switch result {
@@ -435,13 +476,26 @@ class NetManager: NSObject {
                 }
                 
             }
-        } else if image1 != nil && image2 == nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/upload_content_1img.php?place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)&collect=&imageName=\(imageName!)&imageName2=&imageName3="
             
+            return
+        }
+        
+        let params = ["place_code" : "\(placeCode)", "user" : "\(User.info.userEmail!)", "content": "\(content)", "imageName": "\(imageName!)", "imageName2": "\(imageName2!)", "imageName3" : "\(imageName3!)" ]
+
+        
+        if image1 != nil && image2 == nil {
+            
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/upload_content_1img.php"
+
             urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
             Alamofire.upload(multipartFormData: { multipartFormData in
-                multipartFormData.append((image1?.jpegData(compressionQuality: 1.0))!, withName: imageName!, mimeType: "image/jpg")
+                multipartFormData.append((image1?.jpegData(compressionQuality: 0.2))!, withName: imageName!, mimeType: "image/jpg")
+                
+                for (key, value) in params
+                {
+                    multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                }
                 
             }, to:urlString , encodingCompletion: { result in
                 switch result {
@@ -454,13 +508,18 @@ class NetManager: NSObject {
                 }
             })
         } else if image1 != nil && image2 != nil && image3 == nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/upload_content_2img.php?place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)&collect=&imageName=\(imageName!)&imageName2=\(imageName2!)&imageName3="
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/upload_content_2img.php"
             
             urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
             Alamofire.upload(multipartFormData: { multipartFormData in
                 multipartFormData.append((image1?.jpegData(compressionQuality: 1.0))!, withName: imageName!, mimeType: "image/jpg")
                 multipartFormData.append((image2?.jpegData(compressionQuality: 1.0))!, withName: imageName2!, mimeType: "image/jpg")
+                
+                for (key, value) in params
+                {
+                    multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                }
                 
             }, to:urlString , encodingCompletion: { result in
                 switch result {
@@ -475,7 +534,7 @@ class NetManager: NSObject {
             
             
         } else if image1 != nil && image2 != nil && image3 != nil {
-            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/upload_content_3img.php?place_code=\(placeCode)&user=\(User.info.userEmail!)&content=\(content)&collect=&imageName=\(imageName!)&imageName2=\(imageName2!)&imageName3=\(imageName3!)"
+            var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/upload_content_3img.php"
             
             urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             
@@ -483,6 +542,11 @@ class NetManager: NSObject {
                 multipartFormData.append((image1?.jpegData(compressionQuality: 1.0))!, withName: imageName!, mimeType: "image/jpg")
                 multipartFormData.append((image2?.jpegData(compressionQuality: 1.0))!, withName: imageName2!, mimeType: "image/jpg")
                 multipartFormData.append((image3?.jpegData(compressionQuality: 1.0))!, withName: imageName3!, mimeType: "image/jpg")
+                
+                for (key, value) in params
+                {
+                    multipartFormData.append((value as AnyObject).data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                }
                 
             }, to:urlString , encodingCompletion: { result in
                 switch result {
