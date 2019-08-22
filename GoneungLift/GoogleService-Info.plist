@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>430304030941-cdumvg8coadq6jbousr2cbqabthqenvp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.430304030941-cdumvg8coadq6jbousr2cbqabthqenvp</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>430304030941-edcd89hukv2m3v6b0q90p762jnri47ek.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCg1foUpyw2fJJlFwuCu2Lb8W2QcF8jyJQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>430304030941</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.maeultalk.GongneungLife</string>
+	<key>PROJECT_ID</key>
+	<string>gongneunglife</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gongneunglife.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:430304030941:ios:4f5892700e1b2d3f</string>
+	<key>DATABASE_URL</key>
+	<string>https://gongneunglife.firebaseio.com</string>
+</dict>
+</plist>

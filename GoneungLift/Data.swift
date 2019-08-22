@@ -12,8 +12,8 @@ import SwiftyJSON
 class User: NSObject {
     static let info = User()
     
-    var userEmail: String! = "wj@maeultalk.com"
-    var userNick: String! = "공릉생활"
+    var userEmail: String!
+    var userNick: String!
     
 }
 

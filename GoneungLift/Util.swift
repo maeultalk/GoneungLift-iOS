@@ -29,7 +29,7 @@ func ShowAlert(vc: UIViewController, tite: String, okTitle: String, okCompletion
     
     if cancelTitle != "" {
         
-        let cancelAction = UIAlertAction.init(title: okTitle, style: .default){ (action) in
+        let cancelAction = UIAlertAction.init(title: cancelTitle, style: .default){ (action) in
             cancelCompletion()
             alert.dismiss(animated: true, completion: nil)
         }

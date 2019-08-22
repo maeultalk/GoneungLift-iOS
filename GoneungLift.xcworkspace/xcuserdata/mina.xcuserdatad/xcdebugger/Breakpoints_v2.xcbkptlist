@@ -26,12 +26,12 @@
                   moduleName = "GoneungLift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/WriteViewController.swift"
-                  timestampString = "586795746.909575"
+                  timestampString = "588170663.066161"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "226"
                   endingLineNumber = "226"
-                  offsetFromSymbolStart = "2072">
+                  offsetFromSymbolStart = "2346">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "GoneungLift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/WriteViewController.swift"
-                  timestampString = "586795746.9120491"
+                  timestampString = "588170663.06991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "231"
                   endingLineNumber = "231"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoneungLift/NetManager.swift"
-            timestampString = "586795746.694506"
+            timestampString = "587821825.632432"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "358"
-            endingLineNumber = "358"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "requestModifyPost(id:placeCode:content:image1:imageName:image2:imageName2:image3:imageName3:result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoneungLift/NetManager.swift"
-            timestampString = "586795746.694874"
+            timestampString = "587821825.632535"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
             landmarkName = "requestModifyPost(id:placeCode:content:image1:imageName:image2:imageName2:image3:imageName3:result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoneungLift/NetManager.swift"
-            timestampString = "586795746.695163"
+            timestampString = "587821825.632612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "394"
-            endingLineNumber = "394"
+            startingLineNumber = "395"
+            endingLineNumber = "395"
             landmarkName = "requestModifyPost(id:placeCode:content:image1:imageName:image2:imageName2:image3:imageName3:result:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,7 +138,119 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoneungLift/NetManager.swift"
-            timestampString = "586795746.695514"
+            timestampString = "587821825.632727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "364"
+            endingLineNumber = "364"
+            landmarkName = "requestModifyPost(id:placeCode:content:image1:imageName:image2:imageName2:image3:imageName3:result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoneungLift.NetManager.requestModifyPost(id: Swift.String, placeCode: Swift.String, content: Swift.String, image1: Swift.Optional&lt;__C.UIImage&gt;, imageName: Swift.Optional&lt;Swift.String&gt;, image2: Swift.Optional&lt;__C.UIImage&gt;, imageName2: Swift.Optional&lt;Swift.String&gt;, image3: Swift.Optional&lt;__C.UIImage&gt;, imageName3: Swift.Optional&lt;Swift.String&gt;, result: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "GoneungLift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/NetManager.swift"
+                  timestampString = "588170663.0888031"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "364"
+                  endingLineNumber = "364"
+                  offsetFromSymbolStart = "4978">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in GoneungLift.NetManager.requestModifyPost(id: Swift.String, placeCode: Swift.String, content: Swift.String, image1: Swift.Optional&lt;__C.UIImage&gt;, imageName: Swift.Optional&lt;Swift.String&gt;, image2: Swift.Optional&lt;__C.UIImage&gt;, imageName2: Swift.Optional&lt;Swift.String&gt;, image3: Swift.Optional&lt;__C.UIImage&gt;, imageName3: Swift.Optional&lt;Swift.String&gt;, result: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "GoneungLift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/NetManager.swift"
+                  timestampString = "588170663.090152"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "366"
+                  endingLineNumber = "366"
+                  offsetFromSymbolStart = "159">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoneungLift/NetManager.swift"
+            timestampString = "587821825.632869"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "requestLike(contentId:result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoneungLift.NetManager.requestLike(contentId: Swift.String, result: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "GoneungLift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/NetManager.swift"
+                  timestampString = "588170663.093563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in GoneungLift.NetManager.requestLike(contentId: Swift.String, result: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "GoneungLift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/NetManager.swift"
+                  timestampString = "588170663.094763"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "159">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoneungLift/NetManager.swift"
+            timestampString = "587821825.6329319"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "requestUnlike(contentId:result:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoneungLift/NetManager.swift"
+            timestampString = "587821825.6329941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "183"
@@ -153,46 +265,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GoneungLift/NetManager.swift"
-            timestampString = "586795746.69576"
+            filePath = "GoneungLift/HomeViewController.swift"
+            timestampString = "587996725.851666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "363"
-            endingLineNumber = "363"
-            landmarkName = "requestModifyPost(id:placeCode:content:image1:imageName:image2:imageName2:image3:imageName3:result:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "didTouchLikeButton(isLike:index:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GoneungLift.NetManager.requestModifyPost(id: Swift.String, placeCode: Swift.String, content: Swift.String, image1: Swift.Optional&lt;__C.UIImage&gt;, imageName: Swift.Optional&lt;Swift.String&gt;, image2: Swift.Optional&lt;__C.UIImage&gt;, imageName2: Swift.Optional&lt;Swift.String&gt;, image3: Swift.Optional&lt;__C.UIImage&gt;, imageName3: Swift.Optional&lt;Swift.String&gt;, result: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "GoneungLift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/NetManager.swift"
-                  timestampString = "586795747.066602"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "363"
-                  endingLineNumber = "363"
-                  offsetFromSymbolStart = "3900">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in GoneungLift.NetManager.requestModifyPost(id: Swift.String, placeCode: Swift.String, content: Swift.String, image1: Swift.Optional&lt;__C.UIImage&gt;, imageName: Swift.Optional&lt;Swift.String&gt;, image2: Swift.Optional&lt;__C.UIImage&gt;, imageName2: Swift.Optional&lt;Swift.String&gt;, image3: Swift.Optional&lt;__C.UIImage&gt;, imageName3: Swift.Optional&lt;Swift.String&gt;, result: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "GoneungLift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mina/Desktop/DEV/Gong_life/GoneungLift/NetManager.swift"
-                  timestampString = "586795747.068153"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "365"
-                  endingLineNumber = "365"
-                  offsetFromSymbolStart = "120">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoneungLift/LoginViewController.swift"
+            timestampString = "588170983.106541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "didReceiveNotification()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

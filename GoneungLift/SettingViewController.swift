@@ -7,7 +7,7 @@
 //
 import UIKit
 import Foundation
-
+import FirebaseAuth
 class SettingViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lbNickname: UILabel!
@@ -28,7 +28,8 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
 
         ShowAlert(vc: self, tite: "로그아웃 하시겠습니까?", okTitle: "확인", okCompletion: {
             
-            self.performSegue(withIdentifier: "sgMoveToLoginVC", sender: self)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "logout.notification"), object: nil, userInfo: nil)
+            
             
         }, cancelTitle: "취소", cancelCompletion: {})
         

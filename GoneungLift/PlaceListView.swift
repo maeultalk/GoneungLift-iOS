@@ -160,13 +160,13 @@ class PlaceListView: UIView, UICollectionViewDelegate, UICollectionViewDataSourc
         if contents.image == "" {
             return height
         } else {
-            height += 120.0
+            height += 180.0
         }
         
         if contents.image2 == "" {
             return height
         } else {
-            height += 125.0
+            height += 185.0
         }
         
         return height

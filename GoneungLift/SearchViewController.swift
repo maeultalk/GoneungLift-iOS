@@ -122,6 +122,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isSearchResultPage {
             
+            let placeVC: PlaceDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "stid-placeDetailVC") as! PlaceDetailViewController
+            
+            let placeData = searchList[indexPath.row]
+            
+            placeVC.placeCode = placeData.place_code
+            placeVC.placeTitle = placeData.place_name
+            
+            self.navigationController?.pushViewController(placeVC, animated: true)
+            
         } else {
             let searchVC: SearchViewController = self.storyboard?.instantiateViewController(withIdentifier: "stid-searchVC") as! SearchViewController
             

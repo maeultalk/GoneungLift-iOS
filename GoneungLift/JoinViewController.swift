@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class JoinViewController: UIViewController, UITextFieldDelegate {
 
@@ -20,8 +21,15 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
 
     @IBAction func didTouchJoinButton(_ sender: UIButton) {
+        
+        didTouchBackGround(UIButton())
+
         NetManager().reqeustCheckDuplicateNick(nick: self.tfNick.text!) { (result) in
             if result == true {
                 //중복
@@ -29,10 +37,31 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             }else {
                 //가입 고고
                 NetManager().reqeustAddUser(email: self.tfEmail.text! ,nick: self.tfNick.text!) { (result) in
-                        ShowAlert(vc: self, tite: "가입이 완료되었습니다.", okTitle: "확인", okCompletion:{
-                            self.dismiss(animated: true, completion: nil)
-//                            self.performSegue(withIdentifier: "sgMoveToLoginVC", sender: self)
-                        }, cancelTitle: "", cancelCompletion: {})
+                    Auth.auth().createUser(withEmail: self.tfEmail.text!, password: self.tfPw.text!) { authResult, error in
+                        if error == nil {
+                            
+                            let user = Auth.auth().currentUser
+                            
+                            if let user = user {
+                                let changeRequest = user.createProfileChangeRequest()
+                                
+                                changeRequest.displayName = self.tfNick.text!
+                                
+                                changeRequest.commitChanges { error in
+                                    if error == nil {
+                                        ShowAlert(vc: self, tite: "가입이 완료되었습니다.", okTitle: "확인", okCompletion:{
+                                            self.dismiss(animated: true, completion: nil)
+                                            //                            self.performSegue(withIdentifier: "sgMoveToLoginVC", sender: self)
+                                        }, cancelTitle: "", cancelCompletion: {})
+                                    }
+                                }
+                            }
+
+                        }else {
+                            print(error)
+                        }
+                    }
+                
                     }
             }
         }
@@ -40,6 +69,14 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func didTouchLoginButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTouchBackGround(_ sender: UIButton) {
+        
+        self.tfNick.resignFirstResponder()
+        self.tfEmail.resignFirstResponder()
+        self.tfPw.resignFirstResponder()
+        self.tfPwCheck.resignFirstResponder()
     }
     
 }

@@ -100,9 +100,9 @@ class RecieveCell: UITableViewCell {
         SetImageView(imageView: imageView1, imageName: image)
 
         if image2 == "" {
-            alcHeightOfImageView.constant = 120.0
+            alcHeightOfImageView.constant = 180.0
         } else {
-            alcHeightOfImageView.constant = 245.0
+            alcHeightOfImageView.constant = 365.0
             SetImageView(imageView: imageView2, imageName: image2)
         }
         
@@ -210,6 +210,8 @@ class RecieveDetailViewController: UIViewController, UITableViewDataSource, UITa
                     self.inboxId = result
                     self.reloadData()
                     self.isNewInbox = false
+                    
+                    self.lbTitle.text = self.tfInput.text
                 }
                 
                 self.tfInput.text = ""
@@ -253,11 +255,11 @@ class RecieveDetailViewController: UIViewController, UITableViewDataSource, UITa
             }
             
             if data.image != "" {
-                height += 120.0
+                height += 180.0
             }
             
             if data.image2 != "" {
-                height += 125.0
+                height += 185.0
             }
             
             return height

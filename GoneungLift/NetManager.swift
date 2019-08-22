@@ -14,8 +14,8 @@ class NetManager: NSObject {
     
     func requestMainList(userEmail: String, result: @escaping(_ data: [MainContents]) -> Void) {
         
-        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get/get_contents.php?email=wj@maeultalk.com"
-//        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get_contents.php?email=\(userEmail)"
+//        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get/get_contents.php?email=wj@maeultalk.com"
+        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get_contents.php?email=\(userEmail)"
         
         Alamofire.request(URL.init(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
             if results.result.isSuccess {
@@ -175,6 +175,7 @@ class NetManager: NSObject {
     }
     
     func requestLike(contentId: String, result: @escaping (_ data: Bool) -> Void) {
+        
         let urlString = "http://maeultalk.vps.phps.kr/app/apis/get/good_on.php?email=\(User.info.userEmail!)&id=\(contentId)"
         
         Alamofire.request(URL(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in

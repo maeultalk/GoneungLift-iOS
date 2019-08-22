@@ -97,7 +97,7 @@ class HomeCell: UICollectionViewCell {
             
         } else {
             imageBaseView.isHidden = false
-            alcHeightOfImageBaseView.constant = 120.0
+            alcHeightOfImageBaseView.constant = 180.0
             
             SetImageView(imageView: imageView1, imageName: image1)
         }
@@ -105,7 +105,7 @@ class HomeCell: UICollectionViewCell {
         if image2 == "" {
             return
         } else {
-            alcHeightOfImageBaseView.constant = 245.0
+            alcHeightOfImageBaseView.constant = 365.0
             
             SetImageView(imageView: imageView2, imageName: image2)
         }

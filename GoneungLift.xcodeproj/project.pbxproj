@@ -22,6 +22,7 @@
 		3925403422DCA8E7003B22A1 /* PlaceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3925403322DCA8E7003B22A1 /* PlaceInfoView.xib */; };
 		3925403622DCB543003B22A1 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925403522DCB543003B22A1 /* WriteViewController.swift */; };
 		3925403822DCB6B8003B22A1 /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3925403722DCB6B8003B22A1 /* ReplyViewController.swift */; };
+		396ED73923090640007D47FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 396ED73823090640007D47FE /* GoogleService-Info.plist */; };
 		39BB1E4522D778270075EEF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB1E4422D778270075EEF4 /* AppDelegate.swift */; };
 		39BB1E4722D778270075EEF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BB1E4622D778270075EEF4 /* ViewController.swift */; };
 		39BB1E4A22D778270075EEF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39BB1E4822D778270075EEF4 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		3925403322DCA8E7003B22A1 /* PlaceInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoView.xib; sourceTree = "<group>"; };
 		3925403522DCB543003B22A1 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		3925403722DCB6B8003B22A1 /* ReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
+		396ED73823090640007D47FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		39BB1E4122D778270075EEF4 /* GoneungLift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoneungLift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39BB1E4422D778270075EEF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39BB1E4622D778270075EEF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		39BB1E4322D778270075EEF4 /* GoneungLift */ = {
 			isa = PBXGroup;
 			children = (
+				396ED73823090640007D47FE /* GoogleService-Info.plist */,
 				39BB1E4422D778270075EEF4 /* AppDelegate.swift */,
 				39BB1E4622D778270075EEF4 /* ViewController.swift */,
 				39BB1E4822D778270075EEF4 /* Main.storyboard */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39BB1E4F22D778290075EEF4 /* LaunchScreen.storyboard in Resources */,
+				396ED73923090640007D47FE /* GoogleService-Info.plist in Resources */,
 				39BB1E4C22D778290075EEF4 /* Assets.xcassets in Resources */,
 				3925402822DC6ED1003B22A1 /* HomeCell.xib in Resources */,
 				3925402E22DCA65A003B22A1 /* PlaceListView.xib in Resources */,
