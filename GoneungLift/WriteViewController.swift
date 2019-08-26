@@ -19,6 +19,7 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
     @IBOutlet weak var lbNick: UILabel!
     @IBOutlet weak var btnPost: UIButton!
     @IBOutlet weak var lbDate: UILabel!
+    @IBOutlet weak var btnHideKeyboard: UIButton!
     
     @IBOutlet weak var image1View: UIView!
     @IBOutlet weak var image2View: UIView!
@@ -48,7 +49,7 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
         if isEdit {
             btnPost.setTitle("수정", for: .normal)
             textview.text = content
-            
+            lbDate.isHidden = true
             GetImage(imageName: imageNameList[0]) { (image) in
                 
                 if (image != nil) {
@@ -85,6 +86,8 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
         }
         
         lbPlaceName.text = placeName
+        
+        btnHideKeyboard.isHidden = true
 
     }
 
@@ -93,6 +96,8 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
         if textview.text == defaultText {
             textview.text = ""
         }
+        
+        btnHideKeyboard.isHidden = false
         return true
     }
     
@@ -100,9 +105,15 @@ class WriteViewController: UIViewController, UITextViewDelegate, UIImagePickerCo
         if textview.text == "" {
             textview.text = defaultText
         }
+        btnHideKeyboard.isHidden = true
         return true
     }
-    
+
+    @IBAction func didTouchHideKeyboard(_ sender: UIButton) {
+        
+        textview.resignFirstResponder()
+        
+    }
     
     func addImage(image: UIImage) {
         

@@ -73,11 +73,11 @@ class NetManager: NSObject {
     
     func requestModifyComment(commentId: String, comment: String, result: @escaping(_ data: Bool) -> Void) {
         
-        var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/edit_comment.php?id=\(commentId)&comment=\(comment)"
+        let urlString = "http://maeultalk.vps.phps.kr/app/apis/edit_comment.php"
         
-        urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let param = ["id": "\(commentId)", "comment":"\(comment)"]
         
-        Alamofire.request(URL.init(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
+        Alamofire.request(URL.init(string: urlString)!, method: .post, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
             print(results)
             
             if results.result.isSuccess {
@@ -134,11 +134,14 @@ class NetManager: NSObject {
         
         print(placecode)
 
-        var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/add_place.php?code=\(placecode)&name=\(placeName)&nmap=&latitude=&longitude=&tel=&image="
+        var urlString = "http://maeultalk.vps.phps.kr/app/apis/get/add_place.php"
+        //?code=\(placecode)&name=\(placeName)&nmap=&latitude=&longitude=&tel=&image="
         
-        urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+//        urlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
-        Alamofire.request(URL.init(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
+        let param = ["code" : "\(placecode)", "name" : "\(placeName)", "nmap": "", "latitude" : "", "longitude" : "", "tel" : "", "image" : ""]
+        
+        Alamofire.request(URL.init(string: urlString)!, method: .post, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
             print("newplace: \(placecode) \(results)")
             
             if results.result.isSuccess {
@@ -176,9 +179,12 @@ class NetManager: NSObject {
     
     func requestLike(contentId: String, result: @escaping (_ data: Bool) -> Void) {
         
-        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get/good_on.php?email=\(User.info.userEmail!)&id=\(contentId)"
+        let urlString = "http://maeultalk.vps.phps.kr/app/apis/get/good_on.php"
+        //?email=\(User.info.userEmail!)&id=\(contentId)"
         
-        Alamofire.request(URL(string: urlString)!, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
+        let param = ["email": "\(User.info.userEmail!)", "id": "\(contentId)"]
+        
+        Alamofire.request(URL(string: urlString)!, method: .post, parameters: param, encoding: URLEncoding.default, headers: nil).responseJSON { (results) in
             
             print(results)
             

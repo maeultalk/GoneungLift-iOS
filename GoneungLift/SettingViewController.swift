@@ -30,6 +30,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "logout.notification"), object: nil, userInfo: nil)
             
+            Data().setUserInfo(email: "", pw: "")
             
         }, cancelTitle: "취소", cancelCompletion: {})
         

@@ -1650,20 +1650,6 @@
                                     <constraint firstItem="xlj-xa-aSf" firstAttribute="bottom" secondItem="0qI-BZ-93q" secondAttribute="bottom" id="uAV-Zq-g79"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="'용축산마을'에는 어떤일이 있었나요?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jRh-Vh-W4d">
-                                <rect key="frame" x="10" y="148" width="394" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="mQJ-Z1-Wat"/>
-                                </constraints>
-                                <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Ofc-J1-0aC" id="w3K-37-Zwg"/>
-                                </connections>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJQ-m0-mqI">
                                 <rect key="frame" x="0.0" y="753" width="414" height="143"/>
                                 <color key="backgroundColor" red="0.86667251590000005" green="0.86665618420000001" blue="0.8666672111" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1706,7 +1692,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yO6-e7-uAc">
-                                <rect key="frame" x="0.0" y="368" width="414" height="365"/>
+                                <rect key="frame" x="0.0" y="348" width="414" height="365"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIU-aM-a8g">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
@@ -1816,13 +1802,37 @@
                                     <constraint firstItem="vOM-zI-QeI" firstAttribute="leading" secondItem="yO6-e7-uAc" secondAttribute="leading" id="p8Y-rO-Noc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PjI-TW-shU">
+                                <rect key="frame" x="0.0" y="84" width="414" height="729"/>
+                                <connections>
+                                    <action selector="didTouchHideKeyboard:" destination="Ofc-J1-0aC" eventType="touchUpInside" id="kn0-LG-FZt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="'용축산마을'에는 어떤일이 있었나요?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jRh-Vh-W4d">
+                                <rect key="frame" x="10" y="148" width="394" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="mQJ-Z1-Wat"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ofc-J1-0aC" id="w3K-37-Zwg"/>
+                                </connections>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZsW-qa-Pgn" firstAttribute="bottom" secondItem="PjI-TW-shU" secondAttribute="bottom" id="0Tu-d8-SEM"/>
                             <constraint firstItem="mUM-Kp-MlP" firstAttribute="leading" secondItem="UF0-7B-7bW" secondAttribute="leading" id="0lL-73-MTC"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="2bz-1U-cHC" secondAttribute="trailing" id="2sS-ea-B1d"/>
                             <constraint firstItem="UZl-jk-cyI" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="2zt-Le-Eq0"/>
+                            <constraint firstItem="PjI-TW-shU" firstAttribute="top" secondItem="ZsW-qa-Pgn" secondAttribute="top" constant="40" id="47D-iC-iVY"/>
+                            <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="PjI-TW-shU" secondAttribute="trailing" id="C0Q-a9-Kq0"/>
                             <constraint firstItem="FKj-yu-7fe" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="Ci2-SX-uJ0"/>
+                            <constraint firstItem="PjI-TW-shU" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" id="GOT-bk-jcn"/>
                             <constraint firstItem="jRh-Vh-W4d" firstAttribute="leading" secondItem="ZsW-qa-Pgn" secondAttribute="leading" constant="10" id="ICd-j4-QnD"/>
                             <constraint firstItem="2bz-1U-cHC" firstAttribute="top" secondItem="ZsW-qa-Pgn" secondAttribute="top" id="KMw-kQ-lRx"/>
                             <constraint firstItem="ZsW-qa-Pgn" firstAttribute="trailing" secondItem="yO6-e7-uAc" secondAttribute="trailing" id="MGC-tL-R7W"/>
@@ -1852,6 +1862,7 @@
                     <connections>
                         <outlet property="alcLeadingOfImageView3" destination="nPb-r8-9ek" id="MSX-zH-Eka"/>
                         <outlet property="alcWidthOfImageView3" destination="vWz-ec-TXj" id="D4J-PT-OjD"/>
+                        <outlet property="btnHideKeyboard" destination="PjI-TW-shU" id="4LH-4L-LJN"/>
                         <outlet property="btnPost" destination="N4q-qJ-T1K" id="fk3-YM-zDM"/>
                         <outlet property="btnProfile" destination="THo-Ed-n0n" id="LJ9-Nx-qrI"/>
                         <outlet property="image1View" destination="pIU-aM-a8g" id="648-3H-1fz"/>
@@ -1896,6 +1907,7 @@
                     <navigationItem key="navigationItem" id="cOc-bi-dbE"/>
                     <connections>
                         <segue destination="ahl-af-w6s" kind="show" identifier="sgMoveToLoginVC" id="R1H-9q-tsF"/>
+                        <segue destination="bLw-UN-1by" kind="show" identifier="sgMoveToMainVC" id="mPa-Ly-pyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fh9-mQ-DCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1938,7 +1950,7 @@
                                         <rect key="frame" x="20" y="0.0" width="334" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="ahl-af-w6s" id="ipd-p8-G84"/>
                                         </connections>
@@ -1973,7 +1985,7 @@
                                         <rect key="frame" x="20" y="0.0" width="334" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="ahl-af-w6s" id="YVF-kc-oPK"/>
                                         </connections>
@@ -2539,7 +2551,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tnb-tt-9EU"/>
-        <segue reference="Zk2-Pf-sTG"/>
+        <segue reference="N2L-E4-pbx"/>
+        <segue reference="R1H-9q-tsF"/>
         <segue reference="f9Z-AZ-xQv"/>
         <segue reference="Huw-Fb-UH9"/>
         <segue reference="GEh-em-YdN"/>

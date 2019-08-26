@@ -14,6 +14,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnWrite: UIButton!
     
+    var isAutoLogin: Bool! = false
+    
     var dataList: [MainContents]! = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         btnWrite.layer.cornerRadius = 25.0
         
         loadMainList()
+        
+        if isAutoLogin {
+            
+            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "stid-loginVC")
+            
+            if var viewController = self.navigationController?.viewControllers {
+                
+                viewController.insert(loginVC!, at: viewController.count - 2)
+                
+                self.navigationController?.viewControllers = viewController
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

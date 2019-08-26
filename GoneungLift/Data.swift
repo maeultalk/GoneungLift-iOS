@@ -19,7 +19,28 @@ class User: NSObject {
 
 class Data: NSObject {
 
+    override init() {
+        UserDefaults.standard.register(defaults: ["user_email" : ""])
+    }
     
+    func getUserInfo() -> (isUserInfo: Bool, email: String, pw: String) {
+        
+        let email: String = UserDefaults.standard.value(forKey: "user_email") as! String
+        
+        if email == "" {
+            return (false, "", "")
+        } else {
+            
+            let pw = UserDefaults.standard.value(forKey: "user_pw") as! String
+            
+            return (true, email, pw)
+        }
+    }
+    
+    func setUserInfo(email: String, pw: String) {
+        UserDefaults.standard.set(email, forKey: "user_email")
+        UserDefaults.standard.set(pw, forKey: "user_pw")
+    }
     
 }
 

@@ -16,9 +16,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        self.registerNoti()
+    }
+    
+    func registerNoti() {
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveNotification), name: NSNotification.Name(rawValue: "logout.notification"), object: nil)
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -31,7 +34,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
  
     @objc func didReceiveNotification() {
+
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
     }
     
     @IBAction func didTouchLoginButton(_ sender: UIButton) {
@@ -43,6 +51,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     User.info.userNick = userInfo.displayName
                     User.info.userEmail = userInfo.email
                 }
+                
+                Data().setUserInfo(email: self.tfEmail.text!, pw: self.tfPw.text!)
                 
                 self.performSegue(withIdentifier: "sgMoveToMainVC", sender: self)
             } else {
